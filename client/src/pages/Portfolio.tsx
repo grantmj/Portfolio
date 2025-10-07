@@ -13,7 +13,17 @@ export default function Portfolio() {
       description: "Created an AI-based student assessment platform that revolutionizes education. Awarded 1st place among 100+ applicants in the ScaleU + PIA: AI Agents in Education Hackathon.",
       achievement: "1st Place",
       prize: "$5,000 Prize Winner",
-      technologies: ["Next.js", "TypeScript", "Tailwind CSS", "AI/ML"],
+      technologies: [
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "Python",
+        "FastAPI",
+        "Supabase",
+        "httpx",
+        "Vapi (voice agents)",
+        "Drizzle ORM"
+      ],
       link: "https://alterview.me",
       linkText: "Visit AlterView"
     },
