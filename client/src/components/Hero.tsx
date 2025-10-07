@@ -48,7 +48,7 @@ export default function Hero() {
           <Button 
             size="lg" 
             variant="outline"
-            onClick={() => window.open('https://github.com', '_blank')}
+            onClick={() => window.open('https://github/grantmj', '_blank')}
             data-testid="button-github"
           >
             <Github className="w-4 h-4 mr-2" />
