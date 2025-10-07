@@ -23,7 +23,7 @@ export default function Hero() {
         </div>
 
         <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
-          You can reach me at gmjohn22@asu.edu
+          You can reach me on all my socials below
         </p>
 
         <div className="flex flex-wrap items-center justify-center gap-4">
