@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Mail, Linkedin, Github, ChevronDown } from "lucide-react";
+import DownloadResume from "./DownloadResume";
 
 export default function Hero() {
   const scrollToSection = (id: string) => {
@@ -35,6 +36,7 @@ export default function Hero() {
             <Mail className="w-4 h-4 mr-2" />
             Email Me
           </Button>
+          <DownloadResume />
           <Button 
             size="lg" 
             variant="outline"
