@@ -18,13 +18,12 @@ export default function Hero() {
             Grant M. Johnson
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
-            Computer Science Student | ex SWE Intern @ Intel
+            Honors Computer Science Student @ ASU | ex SWE Intern @ Intel
           </p>
         </div>
 
         <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
-          Passionate about building innovative AI solutions and creating impactful software. 
-          Currently studying at Arizona State University.
+          You can reach me at gmjohn22@asu.edu
         </p>
 
         <div className="flex flex-wrap items-center justify-center gap-4">
