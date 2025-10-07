@@ -18,13 +18,13 @@ export default function Hero() {
             Grant M. Johnson
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
-            Computer Science Student | AI Systems Intern at Intel | Award-Winning Developer
+            Computer Science Student | ex SWE Intern @ Intel
           </p>
         </div>
 
         <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
           Passionate about building innovative AI solutions and creating impactful software. 
-          Currently studying at Arizona State University with a 4.00 GPA.
+          Currently studying at Arizona State University.
         </p>
 
         <div className="flex flex-wrap items-center justify-center gap-4">
