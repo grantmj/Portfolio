@@ -4,6 +4,7 @@ import ProjectCard from "@/components/ProjectCard";
 import ExperienceTimeline from "@/components/ExperienceTimeline";
 import SkillsSection from "@/components/SkillsSection";
 import EducationCard from "@/components/EducationCard";
+import ContactSection from "@/components/ContactSection";
 
 export default function Portfolio() {
   const projects = [
@@ -193,6 +194,8 @@ export default function Portfolio() {
           />
         </div>
       </section>
+
+      <ContactSection />
 
       <footer className="py-12 px-6 border-t">
         <div className="max-w-6xl mx-auto text-center space-y-4">

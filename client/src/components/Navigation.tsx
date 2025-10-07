@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
-import { Moon, Sun } from "lucide-react";
+import { Moon, Sun, Menu, X } from "lucide-react";
 
 export default function Navigation() {
   const [theme, setTheme] = useState<'light' | 'dark'>('dark');
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const storedTheme = localStorage.getItem('theme') as 'light' | 'dark' | null;
@@ -29,6 +30,7 @@ export default function Navigation() {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     element?.scrollIntoView({ behavior: 'smooth' });
+    setIsMobileMenuOpen(false);
   };
 
   return (
@@ -74,18 +76,84 @@ export default function Navigation() {
             >
               Education
             </Button>
+            <Button 
+              variant="ghost" 
+              onClick={() => scrollToSection('contact')}
+              data-testid="button-nav-contact"
+            >
+              Contact
+            </Button>
           </div>
 
-          <Button 
-            size="icon" 
-            variant="ghost" 
-            onClick={toggleTheme}
-            data-testid="button-theme-toggle"
-          >
-            {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
-          </Button>
+          <div className="flex items-center gap-2">
+            <Button 
+              size="icon" 
+              variant="ghost" 
+              onClick={toggleTheme}
+              data-testid="button-theme-toggle"
+            >
+              {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+            </Button>
+
+            <Button
+              size="icon"
+              variant="ghost"
+              className="md:hidden"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              data-testid="button-mobile-menu"
+            >
+              {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            </Button>
+          </div>
         </div>
       </div>
+
+      {isMobileMenuOpen && (
+        <div className="md:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-lg border-b">
+          <div className="flex flex-col p-4 space-y-2">
+            <Button 
+              variant="ghost" 
+              onClick={() => scrollToSection('projects')}
+              className="justify-start"
+              data-testid="button-mobile-nav-projects"
+            >
+              Projects
+            </Button>
+            <Button 
+              variant="ghost" 
+              onClick={() => scrollToSection('experience')}
+              className="justify-start"
+              data-testid="button-mobile-nav-experience"
+            >
+              Experience
+            </Button>
+            <Button 
+              variant="ghost" 
+              onClick={() => scrollToSection('skills')}
+              className="justify-start"
+              data-testid="button-mobile-nav-skills"
+            >
+              Skills
+            </Button>
+            <Button 
+              variant="ghost" 
+              onClick={() => scrollToSection('education')}
+              className="justify-start"
+              data-testid="button-mobile-nav-education"
+            >
+              Education
+            </Button>
+            <Button 
+              variant="ghost" 
+              onClick={() => scrollToSection('contact')}
+              className="justify-start"
+              data-testid="button-mobile-nav-contact"
+            >
+              Contact
+            </Button>
+          </div>
+        </div>
+      )}
     </nav>
   );
 }
