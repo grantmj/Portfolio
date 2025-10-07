@@ -36,7 +36,7 @@ export default function ContactSection() {
       icon: Github,
       label: "GitHub",
       value: "github.com",
-      action: () => window.open('https://github.com', '_blank'),
+      action: () => window.open('https://github.com/grantmj', '_blank'),
       testId: "button-contact-github"
     }
   ];
